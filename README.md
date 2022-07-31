@@ -2,7 +2,10 @@
 
 This is a tutorial on different hooks used in react components
 
-## useReducer
+
+<details><summary>useReducer</summary>
+<p>
+
 
 Use this hooks when you have to manage the state of a component and the state is a complex state.
 If uses reducer, dispatch and actions to maintain and update the state.
@@ -43,6 +46,10 @@ placeholder="Random input"
 onChange={ e => dispatch({type: ACTION.USER_INPUT , payload : e.target.value})}
 />
 ```
+</p>
+</details>    
+    
+    
 
 ## useLayoutEffect
 
