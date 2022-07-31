@@ -51,12 +51,33 @@ onChange={ e => dispatch({type: ACTION.USER_INPUT , payload : e.target.value})}
 ```
 
 </p>
-</details>    
+</details>
 
+<details><summary>useLayoutEffect</summary>
+<p>
+the reason why you want to choose the useEffect hook 99% of the time, and the reason why you want to choose useLayoutEffect the other 1%.
+</p>
+<h3>Difference between useEffect and useLayoutEffect </h3>
+<p>
+useEffect is  asynchronous that means it will not delay the re-painting of the UI once the code executed inside the useEffect.
 
-## useLayoutEffect
+useLayoutEffect is synchronous and it will delay the re-painting of the UI once the code executed inside the useLayoutEffect.
 
-## useRef
+eg
+'''
+useLayoutEffect(() => {
+const random = Math.floor(Math.random() \* 750);
+
+    for (let i = 0; i <= 1_0000_0000; i++) {
+      if (i === 1_0000_0000)
+        setStyle({ paddingTop: `${random}px` });
+    }
+
+}, [number]);
+'''
+
+</p>
+</details>
 
 <details><summary>useRef</summary>
 <p>
