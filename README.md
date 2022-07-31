@@ -7,12 +7,13 @@ This is a tutorial on different hooks used in react components
 Use this hooks when you have to manage the state of a component and the state is a complex state.
 If uses reducer, dispatch and actions to maintain and update the state.
 
-useReducer takes two parameters one is reducer function and other is the state .
+#### useReducer takes two parameters one is reducer function and other is the state .
 eg
-const [state, dispatch] = useReducer(reducer,{initialState});
+``` const [state, dispatch] = useReducer(reducer,{initialState}); ```
 
-reducer is a function that takes two arguments : action,state.
+#### reducer is a function that takes two arguments : action,state.
 eg.
+```
 const reducer = (state,action) => {
 
 switch (action.type) {
@@ -30,16 +31,18 @@ return { ...state,input: action.payload };
 
 }
 }
+```
 
-Dispatch is used to dispatch an action to the reducer.
+#### Dispatch is used to dispatch an action to the reducer.
 eg.
-
+```
 <input
 type="text"
 value={state.input}
 placeholder="Random input"
 onChange={ e => dispatch({type: ACTION.USER_INPUT , payload : e.target.value})}
 />
+```
 
 ## useLayoutEffect
 
